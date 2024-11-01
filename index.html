@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -82,8 +83,10 @@
         }
     </style>
 </head>
+
 <body>
-    <div id="dialog" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); padding:20px; background-color: #f44336; color: white;">
+    <div id="dialog"
+        style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); padding:20px; background-color: #f44336; color: white;">
         <p id="message"></p>
         <button onclick="closeDialog()">OK</button>
     </div>
@@ -91,12 +94,13 @@
         <h1>展讯在线签名</h1>
         <nav>
             <a id="link_a" href="#">AVB Tool</a>
-            <a id="link_b" href="#">Legacy</a>
+            <a id="link_b" href="#">Legacy (BSP)</a>
+            <a id="link_c" href="#">Disable Vbmeta Check</a>
         </nav>
     </div>
     <script>
-                // Function to show dialog with message
-                function showDialog(message) {
+        // Function to show dialog with message
+        function showDialog(message) {
             document.getElementById("message").innerText = message;
             document.getElementById("dialog").style.display = "block";
         }
@@ -136,8 +140,10 @@
             showDialog("Your browser does not support Blob download.");
         }
 
-        document.getElementById("link_a").href = window.location.href + '/' + 'avbtool';
-        document.getElementById("link_b").href = window.location.href + '/' + 'legacy';
+        document.getElementById("link_a").href = './avbtool';
+        document.getElementById("link_b").href = './legacy';
+        document.getElementById("link_c").href = './vbmeta';
     </script>
 </body>
+
 </html>
